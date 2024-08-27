@@ -1,4 +1,4 @@
-// Utility functions for watch history
+
 
 const getWatchHistory = () => {
     const history = localStorage.getItem('watchHistory');

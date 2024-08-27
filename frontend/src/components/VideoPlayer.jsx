@@ -15,7 +15,7 @@ const CustomVideoPlayer = ({ src
 
   // Load saved progress on component mount
   useEffect(() => {
-    const savedProgress = localStorage.getItem('video-progress');
+    const savedProgress = localStorage.getItem(`video-progress${video._id}`);
     if (savedProgress) {
       const parsedProgress = parseFloat(savedProgress);
       setProgress(parsedProgress);
@@ -28,7 +28,7 @@ const CustomVideoPlayer = ({ src
   // Save progress to local storage
   useEffect(() => {
     if (progress > 0) {
-      localStorage.setItem('video-progress', progress);
+      localStorage.setItem(`video-progress${video._id}`, progress);
     }
   }, [progress]);
 
