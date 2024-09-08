@@ -11,7 +11,7 @@ const ProfileDashboard = () => {
   const [Videos, setVideos] = useState([])
   const watchhistory = getWatchHistory();
 
-  const progress = watchhistory.length*100 / Videos.length ;
+  const progress = parseInt(watchhistory.length*100 / Videos.length) ;
 
    const navigate = useNavigate()
   
